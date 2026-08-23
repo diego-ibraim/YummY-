@@ -1,0 +1,966 @@
+/* Estilo geral */
+body {
+    background-color: #fff;
+    font-family: 'Archivo Black', sans-serif;
+    overflow-x: hidden; /* Previne barra de rolagem horizontal */
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* Estilo para a logo */
+.col-logo img {
+    width: 40%;
+    margin: 20px;
+    max-width: 100%; /* Garantir que a logo não ultrapasse o limite */
+}
+
+/* Menu */
+ul {
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 15px 10px 0 0;
+}
+
+.nav .nav-link {
+    color: #b60c09;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav .nav-link:hover {
+    background-color: #F2B705;
+    color: #bf0b0b;
+}
+
+/* Carrossel */
+.container-carrosel {
+    margin: 30px;
+}
+
+.carousel-inner img {
+    width: 100%; /* Assegura que as imagens do carrossel ocupem toda a largura */
+    height: auto;
+}
+
+/* Layout das cards */
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os cartões */
+    margin: 20px;
+}
+
+
+/* Estilo de cada card */
+.card3 {
+    margin: 30px;
+    width: 100%;
+    max-width: 18rem; /* Limita o tamanho máximo dos cards */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
+    border-radius: 20px;
+}
+.card3 img{
+    border-radius: 20px;
+}
+.card3:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao card */
+    transform: scale(1.05); /* Aumenta o card em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+    border-radius: 20px;
+}
+
+/* Botões dos cards */
+.card3 .btn {
+    background-color: #b60c09;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card3 .btn:hover {
+    background-color: #F2B705;
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05); /* Aumenta o card em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+/* Títulos e texto */
+.container-title {
+    text-align: center;
+    margin: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #b60c09;
+    
+}
+
+footer {
+    background-color: #b60c09;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Empilha as colunas verticalmente em dispositivos menores */
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-between; /* Distribui igualmente os itens em telas maiores */
+    width: 100%;
+}
+
+footer .col-4 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer .col-4 p {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o ícone verticalmente ao texto */
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+footer .col-4 img {
+    width: 30px;
+    vertical-align: middle; /* Garante alinhamento vertical com o texto */
+}
+
+/* Ajustes específicos para o telefone */
+footer .col-4 strong {
+    display: block; /* Garante que o título "Telefone" fique em uma linha separada */
+    margin-bottom: 5px;
+}
+
+footer .col-4:last-child p {
+    display: flex;
+    justify-content: center; /* Garante alinhamento central do telefone */
+    align-items: center;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 480px) {
+    footer .row {
+        flex-direction: column; /* Empilha as colunas */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    footer .col-4 {
+        width: 100%; /* Cada coluna ocupa toda a largura */
+    }
+
+    footer .col-4 p {
+        flex-direction: row; /* Garante que ícones e textos fiquem lado a lado */
+    }
+}
+
+
+/* Layout do calendário */
+.calendar {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto; /* Adicionando margem automática para centralizar */
+}
+
+h1 {
+    font-size: 24px;
+    color: #F2B705; /* Cor do título */
+}
+
+/* Estilizando o grid do calendário */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center; /* Alinha os itens no centro */
+}
+
+/* Estilizando cada mês */
+.month {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #F2B705; /* Cor do fundo dos meses */
+    color: #333;
+    text-align: center;
+}
+
+.month h3 {
+    margin: 0;
+    font-size: 18px;
+    padding: 5px 0;
+    color: #FFF; /* Cor do texto nos meses */
+}
+
+/* Estilizando os dias da semana */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+/* Estilizando os dias */
+.day {
+    background-color: #F2E1AC;
+    color: #333;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.day:hover {
+    background-color: #F2B705;
+    color: #FFF; /* Cor ao passar o mouse */
+}
+
+/* Estilizando os dias selecionados */
+.day.selected {
+    background-color: #BF0B0B; /* Cor do dia selecionado */
+    color: #FFF;
+}
+
+/* Estilizando o seletor de horário */
+.time-selector {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Estilizando os slots de horário */
+.time-slot {
+    background-color: #F2E1AC;
+    color: #333;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.time-slot.selected {
+    background-color: #F2B705; /* Cor ao selecionar o horário */
+    color: #FFF;
+}
+
+.time-slot:hover {
+    background-color: #BF4B4B; /* Cor ao passar o mouse nos horários */
+    color: #FFF;
+}
+
+/* Estilizando os botões */
+button {
+    background-color: #BF0B0B; /* Cor do botão */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #BF4B4B; /* Cor do botão ao passar o mouse */
+}
+
+/* Responsividade para diferentes tamanhos de tela */
+
+/* Para telas maiores que 768px */
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .days-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .calendar-grid {
+        grid-template-columns: 1fr; /* Apenas uma coluna para empilhar os meses */
+        gap: 20px; /* Espaço entre os meses */
+    }
+
+    .month {
+        width: 100%; /* O mês ocupa toda a largura disponível */
+    }
+
+
+    .calendar {
+        /* Já definido como flex-direction: column; */
+        max-width: 90vw; /* Ocupa quase toda a largura da tela */
+      }
+    
+      .calendar-grid {
+        /* Ajustar o número de colunas para telas menores */
+        grid-template-columns: repeat(2, 1fr);
+      }
+    
+      .month {
+        /* Reduzir o padding para economizar espaço */
+        padding: 10px 5px;
+      }
+    
+      .days-grid {
+        /* Ajustar o espaçamento entre os dias */
+        gap: 5px;
+      }
+    
+      .day {
+        /* Reduzir o tamanho da fonte e o padding */
+        font-size: 12px;
+        padding: 5px;
+      }
+
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .month h3 {
+        font-size: 16px;
+    }
+
+    .container3 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card3 {
+        width: 45%; /* Cards ocupam 45% da largura para se ajustarem */
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .carousel-inner img {
+        max-height: 350px;
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    .col-logo img {
+        width: 60%; /* Logo maior em telas pequenas */
+    }
+
+    .nav {
+        flex-direction: row; /* Exibe os links de navegação horizontalmente */
+        justify-content: center;
+    }
+
+    .nav .nav-link {
+        padding: 8px 12px; /* Ajuste no espaçamento do link */
+    }
+
+    .card3 {
+        width: 100%; /* Cards ocupam toda a largura */
+        margin: 10px 0;
+    }
+
+    .carousel-inner img {
+        height: auto; /* Garante que o carrossel seja adaptável */
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+
+    .container-title {
+        font-size: 18px;
+    }
+
+    .calendar {
+        max-width: 100%; /* Ajusta o tamanho total para ocupar a largura da tela */
+        padding: 10px; /* Espaçamento interno */
+    }
+
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .month {
+        width: 100%; /* Mantém o mês centralizado e com largura total */
+        padding: 10px; /* Reduz o espaçamento interno do mês */
+        font-size: 16px; /* Reduz o tamanho do texto do nome do mês */
+    }
+
+    .month h3 {
+        font-size: 18px; /* Ajusta o tamanho do título dos meses */
+        margin-bottom: 10px;
+    }
+
+    .days-grid {
+        grid-template-columns: repeat(7, 1fr); /* Mantém os dias em 7 colunas */
+        gap: 5px; /* Reduz o espaçamento entre os dias */
+    }
+
+    .day {
+        font-size: 12px; /* Diminui o tamanho dos números */
+        padding: 8px; /* Reduz o espaço interno dos dias */
+        border-radius: 3px; /* Ajusta as bordas arredondadas */
+    }
+
+    .container3 {
+        flex-direction: column; /* Empilha os cartões verticalmente */
+        align-items: center; /* Centraliza os cartões */
+    }
+
+   
+}
+
+
+
+/* Seções de texto e títulos */
+.container-title2,
+.container-title3,
+.container193 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px ;
+    
+}
+
+/* Botão de ação */
+.escolher-pratos {
+    background-color: #BF0B0B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.escolher-pratos:hover {
+    background-color: #F2B705;
+}
+
+/* Ajustando a imagem do Instagram */
+.insta img {
+    width: 10%;
+    margin-top: 10px;
+}
+#selected-times-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #selected-times-list li {
+    margin-bottom: 10px;
+  }
+
+
+/* Estilo para os cards */
+.card {
+    width: 100%;
+    max-width: 18rem; /* Todos os cards terão o mesmo tamanho máximo */
+    margin: 15px auto; /* Centraliza os cards horizontalmente */
+    background-color: #F2E1AC; /* Cor de fundo do card ajustada para combinar com o site */
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    text-align: center; /* Centraliza o conteúdo do card */
+    padding: 15px; /* Espaçamento interno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações para hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de crescimento ao passar o mouse */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+/* Estilo para os títulos dos cards */
+.card h3 {
+    font-size: 1.25rem; /* Ajuste no tamanho da fonte */
+    color: #BF0B0B; /* Cor do título em harmonia com o site */
+    margin: 10px 0;
+}
+
+/* Estilo para os textos dos cards */
+.card p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilizando o container da checkbox */
+/* Estilizando o container da checkbox */
+.card label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #BF0B0B; /* Cor do texto */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.card label:hover {
+    color: #F2B705; /* Cor ao passar o mouse no texto */
+}
+
+/* Removendo o estilo padrão da checkbox */
+.card input[type="checkbox"] {
+    appearance: none; /* Remove o estilo padrão */
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #BF0B0B; /* Borda da checkbox */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #FFF; /* Fundo padrão */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px; /* Espaço entre o checkbox e o texto */
+    display: inline-flex; /* Garante alinhamento interno */
+    justify-content: center; /* Centraliza conteúdo horizontalmente */
+    align-items: center; /* Centraliza conteúdo verticalmente */
+}
+
+/* Estilo quando marcada */
+.card input[type="checkbox"]:checked {
+    background-color: #BF0B0B; /* Fundo ao ser marcado */
+    border-color: #F2B705; /* Borda ao ser marcado */
+    position: relative;
+}
+
+.card input[type="checkbox"]:checked::after {
+    content: '✓'; /* Adiciona o ícone de marcação */
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza usando transform */
+}
+
+
+/* Estilizando as imagens dentro dos cards */
+.card img {
+    width: 100%; /* As imagens ocuparão toda a largura do card */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorção */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F2F2F2; /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilo do "thumb", a parte que desliza */
+::-webkit-scrollbar-thumb {
+    background-color: #b60c09; /* Cor principal do thumb */
+    border-radius: 10px; /* Borda arredondada */
+    border: 3px solid #F2E1AC; /* Borda ao redor do thumb */
+}
+
+/* Estilo do thumb ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #F2B705; /* Cor do thumb ao passar o mouse */
+}
+
+/* Estilo do canto da barra de rolagem (quando há dois eixos) */
+::-webkit-scrollbar-corner {
+    background-color: #F2E1AC;
+}
+
+
+
+
+/* Estilos do botão de "voltar ao topo" */
+#voltarTopo {
+    position: fixed;
+    bottom: 20px; /* Distância da borda inferior */
+    right: 20px; /* Distância da borda direita */
+    background-color: #BF0B0B; /* Cor inicial */
+    color: white;
+    border: 1px solid #f2f2f2; /* Borda ao redor do botão */
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px; /* Tamanho da seta */
+    line-height: 1; /* Ajusta o espaçamento vertical */
+    display: none; /* Esconde o botão inicialmente */
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+    width: 50px;
+    height: 50px;
+    
+    /* Flexbox para centralizar a seta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Efeito hover com troca de cores */
+#voltarTopo:hover {
+    background-color: #F2B705; /* Primeira cor de hover */
+}
+
+#voltarTopo:active {
+    background-color: #F2C84B; /* Segunda cor de hover */
+}
+
+.card-title {
+    color: #b60c09;
+}
+.card-des {
+    color: black;
+    
+}
+
+
+.container-qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.container-qr img {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Container de Feedback */
+.feedback-container {
+    max-width: 600px; /* Aumentei a largura máxima */
+    width: 90%; /* Ajustável para telas menores */
+    margin: 40px auto; /* Adicionei uma margem de 40px em cima e embaixo */
+    padding: 30px; /* Aumentei o espaçamento interno */
+    border: 2px solid #b60c09;
+    border-radius: 10px;
+    background-color: #F2E1AC;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adicionei sombra para destaque */
+}
+
+.feedback-container h2 {
+    font-size: 28px; /* Aumentei o tamanho do título */
+    color: #b60c09;
+    margin-bottom: 20px;
+}
+
+/* Botões de Feedback */
+.feedback-options {
+    display: flex;
+    justify-content: space-evenly; /* Espaçamento uniforme entre os botões */
+    flex-wrap: wrap; /* Ajusta para quebrar linha em telas menores */
+    gap: 15px; /* Espaçamento adicional entre os botões */
+}
+
+.feedback-options button {
+    padding: 15px 30px; /* Aumentei o tamanho do botão */
+    border: 2px solid #b60c09;
+    border-radius: 30px;
+    font-size: 18px; /* Aumentei o tamanho da fonte */
+    cursor: pointer;
+    background-color: #FFF;
+    color: #b60c09;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre texto e emoji */
+    transition: all 0.3s ease;
+}
+
+.feedback-options button:hover {
+    background-color: #F2B705;
+    color: #FFF;
+}
+
+.feedback-result {
+    margin-top: 30px;
+    font-size: 20px; /* Texto maior para destaque */
+    color: #333;
+    font-weight: bold;
+}
+
+
+.passo1 {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.passo1 h1 {
+    color: #b71c1c; /* Vermelho */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.passo1-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.passo1-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px; /* Aumenta a largura padrão */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.passo1-card:hover {
+    transform: scale(1.05); /* Aumenta o card em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+.passo1-number {
+    color: #b71c1c; /* Vermelho */
+    font-size: 3em;
+    margin: 0;
+}
+
+.passo1-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.passo1-text {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.container194 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+
+.comecar {
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    padding: 20px 40px; /* Tamanho do botão */
+    border-radius: 12px; /* Bordas arredondadas */
+    background-color: #BF0B0B; /* Cor inicial de fundo */
+    color: #F2F2F2; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    cursor: pointer; /* Indica que o botão é clicável */
+    text-align: center; /* Centraliza o texto */
+    display: flex;
+    justify-content: center; /* Garante que o texto esteja centralizado horizontalmente */
+    align-items: center; /* Garante que o texto esteja centralizado verticalmente */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
+    
+}
+
+/* Efeito hover */
+.comecar:hover {
+    background-color: #F2B705; /* Cor de fundo ao passar o mouse */
+    color: #BF0B0B; /* Cor do texto ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o card em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+/* Efeito de foco (quando o botão é clicado ou recebe o foco) */
+.comecar:focus {
+    outline: none; /* Remove o contorno padrão ao focar */
+    background-color: #F2B705; /* Cor de fundo ao focar */
+    color: #BF0B0B; /* Cor do texto ao focar */
+}
+
+/* Garantir que o link não tenha sublinhado */
+.comecar a {
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+/* Remover sublinhado do link mesmo no efeito hover */
+.comecar a:hover {
+    text-decoration: none; /* Remove sublinhado ao passar o mouse */
+}
+
+
+
+.form-group label {
+    color: #BF0B0B; /* Cor dos labels */
+    font-size: 1rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #F2B705; /* Cor das bordas dos campos */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #BF0B0B; /* Cor das bordas ao focar */
+    box-shadow: 0 0 8px rgba(191, 11, 11, 0.6); /* Sombra no foco */
+}
+
+button[type="submit"] {
+    background-color: #BF0B0B; /* Cor do botão */
+    color: #f2f2f2; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
+    
+}
+
+button[type="submit"]:hover {
+    background-color: #F2B705; /* Cor de hover no botão */
+    color: #F2F2F2; /* Cor do texto do botão ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento */
+}
+
+.container-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Alinhamento geral dos planos */
+.plano-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.plano-info {
+    
+    display: flex;
+}
+    
+
+
+.plano-preco {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Estilo para o formulário */
+.container4 {
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Estilo do botão */
+.btn-escolher-dias {
+    background-color: #BF0B0B; /* Cor do fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 15px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    width: 100%; /* Largura total */
+    cursor: pointer; /* Cursor de clique */
+    text-align: center; /* Alinhamento do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Efeito de hover no botão */
+.btn-escolher-dias:hover {
+    background-color: #9c0a0a; /* Cor de fundo ao passar o mouse */
+}
+
+/* Adicionando um cursor de pointer para indicar que a imagem pode ser clicada */
+.img-clickable {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.img-clickable:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+}
+
+.modal-dialog {
+    max-width: 80%;
+    margin: 10% auto;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
